@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:db_crud_app/utilities/app_colours.dart';
 import 'package:db_crud_app/utilities/sidebar_menu.dart';
-import '../utilities/calendar.dart';
+//import '../utilities/calendar.dart';
 import '../utilities/data_table.dart';
 
 class HomePage extends StatefulWidget {
@@ -34,8 +34,8 @@ class _HomePageState extends State<HomePage> {
                 child: ListView(
                   scrollDirection: Axis.horizontal,
                   children: [
-                    CalendarWidget(),
-                    SizedBox(width: 1),
+                    // CalendarWidget(),
+                    // SizedBox(width: 1),
                     DataTableUI(),
                   ],
                 ),
