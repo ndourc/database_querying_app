@@ -13,7 +13,7 @@ var myDrawer = Drawer(
     children: [
       DrawerHeader(
         child: Text(
-          'Welcome To \nSQLiFy!',
+          'Welcome To \nbaobab.db',
           style: TextStyle(
               color: AppColor.mainAccent,
               fontFamily: 'Bradley Hand ITC',
@@ -23,10 +23,10 @@ var myDrawer = Drawer(
       ),
       ListTile(
         leading: Icon(
-          Icons.dataset,
+          Icons.home,
           color: AppColor.mainAccent,
         ),
-        title: Text('O P E N  D A T A B A S E'),
+        title: Text('H O M E'),
       ),
       ListTile(
         leading: Icon(
@@ -41,13 +41,6 @@ var myDrawer = Drawer(
           color: AppColor.mainAccent,
         ),
         title: Text('S E T T I N G S'),
-      ),
-      ListTile(
-        leading: Icon(
-          Icons.info,
-          color: AppColor.mainAccent,
-        ),
-        title: Text('A B O U T'),
       ),
       ListTile(
         leading: Icon(
