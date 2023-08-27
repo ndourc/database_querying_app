@@ -4,8 +4,6 @@ import 'package:path/path.dart';
 
 void main() => runApp(const MyApp());
 
-
-
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
@@ -94,7 +92,6 @@ class _DatabaseScreenState extends State<DatabaseScreen> {
     );
   }
 
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -174,95 +171,6 @@ class _DatabaseScreenState extends State<DatabaseScreen> {
     );
   }
 
-  // ... Previous imports and code ...
-
-//class _DatabaseScreenState<DatabaseScreen> {
-  // ... Your existing code ...
-
-  @override
-  Widget dart(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: const Text('Database Querying App')),
-      body: SingleChildScrollView(
-        padding: const EdgeInsets.all(16.0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Container(
-              padding: const EdgeInsets.symmetric(horizontal: 16.0),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  _buildTextFieldWithButton(
-                    assetnameController,
-                    'Asset Name',
-                    'Insert',
-                    _insertRecord,
-                  ),
-                  const SizedBox(height: 16.0),
-                  _buildTextFieldWithButton(
-                    categoryController,
-                    'Category',
-                    'Retrieve',
-                    _retrieveRecords,
-                  ),
-                  const SizedBox(height: 16.0),
-                  _buildTextFieldWithButton(
-                    serialNumberController,
-                    'Serial Number',
-                    'Update',
-                    () => _updateRecord(1, 'Jane Smith', 30),
-                  ),
-                  const SizedBox(height: 16.0),
-                  _buildTextFieldWithButton(
-                    brandController,
-                    'Brand/Model',
-                    'Delete',
-                    () => _deleteRecord(1),
-                  ),
-                ],
-              ),
-            ),
-            const SizedBox(height: 24.0),
-            Center(
-              child: Text(
-                'Welcome to Database Querying App',
-                style: Theme.of(context).textTheme.headline5,
-              ),
-            ),
-            const SizedBox(height: 8.0),
-            Center(
-              child: Text(
-                'Store and manage your records with ease.',
-                style: TextStyle(color: Colors.grey),
-              ),
-            ),
-          ],
-        ),
-      ),
-      floatingActionButton: Container(
-        padding: const EdgeInsets.all(16.0),
-        child: Row(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            _buildActionButton('Insert', _insertRecord),
-            SizedBox(width: 16.0),
-            _buildActionButton('Retrieve', _retrieveRecords),
-            SizedBox(width: 16.0),
-            _buildActionButton('Update', () => _updateRecord(1, 'Jane Smith', 30)),
-            SizedBox(width: 16.0),
-            _buildActionButton('Delete', () => _deleteRecord(1)),
-          ],
-        ),
-      ),
-      floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
-    );
-  }
-
-  // ... Rest of your code ...
-}
-
-
   Widget _buildActionButton(String label, VoidCallback onPressed) {
     return ElevatedButton(
       onPressed: () async {
@@ -295,5 +203,5 @@ class _DatabaseScreenState extends State<DatabaseScreen> {
     );
   }
 
-
+}
 
