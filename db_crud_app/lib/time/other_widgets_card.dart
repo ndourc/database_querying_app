@@ -34,17 +34,17 @@ class OtherWidgets extends StatelessWidget {
               Column(
                 children: [
                   Text(
-                    'Henry Ndou',
-                    style: TextStyle(
-                      color: AppColor.appWhiteColor,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                  Text(
-                    'Flutter and ML Engineer',
+                    'Recent Database',
                     style: TextStyle(
                       color: AppColor.appWhiteColor,
                       fontWeight: FontWeight.normal,
+                    ),
+                  ),
+                  Text(
+                    'Assets Register.db',
+                    style: TextStyle(
+                      color: AppColor.appWhiteColor,
+                      fontWeight: FontWeight.bold,
                     ),
                   )
                 ],
@@ -55,10 +55,10 @@ class OtherWidgets extends StatelessWidget {
             thickness: 0.5,
             color: AppColor.appWhiteColor,
           ),
-          profileListTile('Joined Date', '17 May 2023'),
-          profileListTile('Projects', '107 Active'),
-          profileListTile('Accomplishments', '597'),
-          profileListTile('Contract Until', '15 August 2025')
+          profileListTile('Date of Creation', '17 August 2023'),
+          profileListTile('Records', '11 127'),
+          profileListTile('Columns', '59'),
+          profileListTile('Last Edited', '19 August 2025')
         ],
       ),
     );

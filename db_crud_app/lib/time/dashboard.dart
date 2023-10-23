@@ -3,7 +3,6 @@ import '../utilities/calendar.dart';
 import 'app_colours.dart';
 import 'employee_details_widget.dart';
 import 'header_widget.dart';
-import 'notification_card_widget.dart';
 import 'other_widgets_card.dart';
 
 class Dashboard extends StatefulWidget {
@@ -36,10 +35,6 @@ class _DashboardState extends State<Dashboard> {
                   child: Container(
                     child: Column(
                       children: [
-                        NotificationCardWidget(),
-                        SizedBox(
-                          height: 20,
-                        ),
                         EmployeeDetailsWidget()
                       ],
                     ),

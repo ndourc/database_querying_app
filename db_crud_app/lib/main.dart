@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       themeMode: ThemeMode.system,
       //theme: ThemeClass.lightTheme,
-      home: HomePage()
+      home: HomePage(title: 'DB Connection')
     );
   }
 }

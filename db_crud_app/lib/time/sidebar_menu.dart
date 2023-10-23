@@ -19,27 +19,59 @@ class _SideBarState extends State<SideBar> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Container(
-              margin: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
-              child: Text(
-                'Welcome to \nbaobab.db',
-                style: TextStyle(
-                  color: AppColor.sideBarTextColor,
-                  fontSize: 31,
-                  fontWeight: FontWeight.bold,
-                  fontFamily: 'Bradley Hand ITC',
+              margin: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),        
+                child:
+                  // Text(
+                  //   'Welcome to \nbaobab.db',
+                  //   style: TextStyle(
+                  //     color: AppColor.greenAccentColor,
+                  //     fontSize: 25,
+                  //     fontWeight: FontWeight.bold,
+                  //     fontFamily: 'Bradley Hand ITC',
+                  //   ),
+                  // ), 
+                  Image.asset("assets/Screenshot (342).png")             
+            ),
+            InkWell(
+              onTap: () {},
+              child: ListTile(
+                leading: Icon(
+                  Icons.home,
+                  color: AppColor.greenAccentColor,
                 ),
+                title: Text('H O M E'),
               ),
             ),
-             InkWell(
+            InkWell(
               onTap: () {},
-               child: ListTile(
-                     leading: Icon(
-                       Icons.home,
-                       color: AppColor.mainAccent,
-                     ),
-                     title: Text('H O M E'),
-                   ),
-             ),
+              child: ListTile(
+                leading: Icon(
+                  Icons.download,
+                  color: AppColor.greenAccentColor,
+                ),
+                title: Text('I M P O R T'),
+              ),
+            ),
+            InkWell(
+              onTap: () {},
+              child: ListTile(
+                leading: Icon(
+                  Icons.settings,
+                  color: AppColor.greenAccentColor,
+                ),
+                title: Text('S E T T I N G S'),
+              ),
+            ),
+            InkWell(
+              onTap: () {},
+              child: ListTile(
+                leading: Icon(
+                  Icons.logout,
+                  color: AppColor.greenAccentColor,
+                ),
+                title: Text('L O G O U T'),
+              ),
+            ),
           ],
         ),
         // Image.asset('<path>')

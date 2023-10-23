@@ -24,533 +24,183 @@ class _EmployeeDetailsWidgetState extends State<EmployeeDetailsWidget> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Container(
-                decoration: BoxDecoration(
-                  shape: BoxShape.rectangle,
-                  color: AppColor.greenAccentColor,
+              Row(children: [
+                Container(
+                  decoration: BoxDecoration(
+                      color: AppColor.greenAccentColor,
+                      borderRadius: BorderRadius.circular(20)),
+                  height: 30,
+                  width: 5,
+                  padding: const EdgeInsets.all(20),
                 ),
-                height: 30,
-                width: 5,
-              ),
-              SizedBox(width: 5),
-              Text(
-                'Attendance Details',
-                style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                  fontSize: 20,
-                  color: AppColor.appWhiteColor,
-                ),
-              ),
-              SizedBox(width: 170),
-              Container(
-                decoration: BoxDecoration(
-                  color: AppColor.greenAccentColor,
-                  borderRadius: BorderRadius.circular(100),
-                ),
-                padding: const EdgeInsets.symmetric(
-                  vertical: 10,
-                  horizontal: 20,
-                ),
-                child: Row(
-                  children: [
-                    Icon(
-                      Icons.keyboard_arrow_down_sharp,
+                const SizedBox(width: 10),
+                Text(
+                  "Available Databases",
+                  style: TextStyle(
+                      //fontFamily: ,
                       color: AppColor.appWhiteColor,
-                    ),
-                    const SizedBox(width: 10),
-                    Text(
-                      'Sort',
-                      style: TextStyle(
-                        fontWeight: FontWeight.bold,
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold),
+                ),
+              ]),
+              //SizedBox(width: 10),
+              Row(children: [
+                Container(
+                  decoration: BoxDecoration(
+                    color: AppColor.greenAccentColor,
+                    borderRadius: BorderRadius.circular(100),
+                  ),
+                  padding: const EdgeInsets.symmetric(
+                    vertical: 10,
+                    horizontal: 20,
+                  ),
+                  child: Row(
+                    children: [
+                      Icon(
+                        Icons.keyboard_arrow_down_sharp,
                         color: AppColor.appWhiteColor,
                       ),
-                    ),
-                  ],
+                      const SizedBox(width: 10),
+                      Text(
+                        'Sort',
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          color: AppColor.appWhiteColor,
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
-              ),
-              SizedBox(width: 5),
-              Container(
-                decoration: BoxDecoration(
-                  color: AppColor.greenAccentColor,
-                  borderRadius: BorderRadius.circular(100),
-                ),
-                padding: const EdgeInsets.symmetric(
-                  vertical: 10,
-                  horizontal: 20,
-                ),
-                child: Row(
-                  children: [
-                    Icon(
-                      Icons.filter_alt_outlined,
-                      color: AppColor.appWhiteColor,
-                    ),
-                    const SizedBox(width: 5),
-                    Text(
-                      'Filter',
-                      style: TextStyle(
-                        fontWeight: FontWeight.bold,
+                SizedBox(width: 15),
+                Container(
+                  decoration: BoxDecoration(
+                    color: AppColor.greenAccentColor,
+                    borderRadius: BorderRadius.circular(100),
+                  ),
+                  padding: const EdgeInsets.symmetric(
+                    vertical: 10,
+                    horizontal: 20,
+                  ),
+                  child: Row(
+                    children: [
+                      Icon(
+                        Icons.filter_alt_outlined,
                         color: AppColor.appWhiteColor,
                       ),
-                    ),
-                    Icon(
-                      Icons.keyboard_arrow_down_outlined,
-                      color: AppColor.appWhiteColor,
-                    ),
-                  ],
+                      const SizedBox(width: 5),
+                      Text(
+                        'Filter',
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          color: AppColor.appWhiteColor,
+                        ),
+                      ),
+                      Icon(
+                        Icons.keyboard_arrow_down_outlined,
+                        color: AppColor.appWhiteColor,
+                      ),
+                    ],
+                  ),
                 ),
-              ),
+              ])
             ],
           ),
           Divider(
             thickness: 0.5,
             color: AppColor.appWhiteColor,
           ),
-          Row(
+          Table(
+            defaultVerticalAlignment: TableCellVerticalAlignment.middle,
             children: [
-              Column(
+              TableRow(
+                decoration: BoxDecoration(
+                    border: Border(
+                        bottom: BorderSide(
+                  color: AppColor.dashboardGreyColor,
+                  width: 0.5,
+                ))),
                 children: [
-                  Container(
-                    decoration: BoxDecoration(
-                      color: AppColor.dashboardGreyColor,
-                      borderRadius: BorderRadius.circular(15),
-                    ),
-                    padding: const EdgeInsets.symmetric(
-                      vertical: 10,
-                      horizontal: 20,
-                    ),
-                    child: Row(
-                      children: [
-                        Column(
-                          children: [
-                            Row(
-                              children: [
-                                Icon(
-                                  Icons.access_time,
-                                  color: AppColor.appWhiteColor,
-                                ),
-                                SizedBox(width: 5),
-                                Text(
-                                  'July 18 2023',
-                                  style:
-                                      TextStyle(color: AppColor.appWhiteColor),
-                                ),
-                                SizedBox(width: 15),
-                                ClipRect(
-                                  child: BackdropFilter(
-                                    filter: ImageFilter.blur(
-                                      sigmaX: 15,
-                                      sigmaY: 15,
-                                    ),
-                                    child: Text(
-                                      'On Time',
-                                      style: TextStyle(
-                                          color: AppColor.appWhiteColor,
-                                          fontWeight: FontWeight.bold),
-                                    ),
-                                  ),
-                                ),
-                              ],
-                            ),
-                            SizedBox(height: 10),
-                            Row(
-                              children: [
-                                Text.rich(
-                                  TextSpan(
-                                      style: TextStyle(
-                                          fontSize: 17,
-                                          color: AppColor.appWhiteColor,
-                                          fontWeight: FontWeight.normal),
-                                      children: [
-                                        TextSpan(
-                                          text: 'Check In Time',
-                                          style: TextStyle(
-                                            fontWeight: FontWeight.normal,
-                                            fontSize: 10,
-                                            color: AppColor.appWhiteColor,
-                                          ),
-                                        ),
-                                        TextSpan(
-                                          text: '\n08:30',
-                                          style: TextStyle(
-                                            fontWeight: FontWeight.bold,
-                                            fontSize: 15,
-                                            color: AppColor.appWhiteColor,
-                                          ),
-                                        ),
-                                      ]),
-                                ),
-                                SizedBox(width: 20),
-                                Text.rich(
-                                  TextSpan(
-                                      style: TextStyle(
-                                          fontSize: 17,
-                                          color: AppColor.appWhiteColor,
-                                          fontWeight: FontWeight.normal),
-                                      children: [
-                                        TextSpan(
-                                          text: 'Check Out Time',
-                                          style: TextStyle(
-                                            fontWeight: FontWeight.normal,
-                                            fontSize: 10,
-                                            color: AppColor.appWhiteColor,
-                                          ),
-                                        ),
-                                        TextSpan(
-                                          text: '\n17:15',
-                                          style: TextStyle(
-                                            fontWeight: FontWeight.bold,
-                                            fontSize: 15,
-                                            color: AppColor.appWhiteColor,
-                                          ),
-                                        ),
-                                      ]),
-                                ),
-                              ],
-                            )
-                          ],
-                        ),
-                      ],
-                    ),
-                  ),
-                  SizedBox(height: 10),
-                  Container(
-                    decoration: BoxDecoration(
-                      color: AppColor.dashboardGreyColor,
-                      borderRadius: BorderRadius.circular(15),
-                    ),
-                    padding: const EdgeInsets.symmetric(
-                      vertical: 10,
-                      horizontal: 20,
-                    ),
-                    child: Row(
-                      children: [
-                        Column(
-                          children: [
-                            Row(
-                              children: [
-                                Icon(
-                                  Icons.access_time,
-                                  color: AppColor.appWhiteColor,
-                                ),
-                                SizedBox(width: 5),
-                                Text(
-                                  'July 20 2023',
-                                  style:
-                                      TextStyle(color: AppColor.appWhiteColor),
-                                ),
-                                SizedBox(width: 15),
-                                ClipRect(
-                                  child: BackdropFilter(
-                                    filter: ImageFilter.blur(
-                                      sigmaX: 15,
-                                      sigmaY: 15,
-                                    ),
-                                    child: Text(
-                                      'Absent',
-                                      style: TextStyle(
-                                          color: AppColor.appWhiteColor,
-                                          fontWeight: FontWeight.bold),
-                                    ),
-                                  ),
-                                ),
-                              ],
-                            ),
-                            SizedBox(height: 10),
-                            Row(
-                              children: [
-                                Text.rich(
-                                  TextSpan(
-                                      style: TextStyle(
-                                          fontSize: 17,
-                                          color: AppColor.appWhiteColor,
-                                          fontWeight: FontWeight.normal),
-                                      children: [
-                                        TextSpan(
-                                          text: 'Check In Time',
-                                          style: TextStyle(
-                                            fontWeight: FontWeight.normal,
-                                            fontSize: 10,
-                                            color: AppColor.appWhiteColor,
-                                          ),
-                                        ),
-                                        TextSpan(
-                                          text: '\n-',
-                                          style: TextStyle(
-                                            fontWeight: FontWeight.bold,
-                                            fontSize: 15,
-                                            color: AppColor.appWhiteColor,
-                                          ),
-                                        ),
-                                      ]),
-                                ),
-                                SizedBox(width: 20),
-                                Text.rich(
-                                  TextSpan(
-                                      style: TextStyle(
-                                          fontSize: 17,
-                                          color: AppColor.appWhiteColor,
-                                          fontWeight: FontWeight.normal),
-                                      children: [
-                                        TextSpan(
-                                          text: 'Check Out Time',
-                                          style: TextStyle(
-                                            fontWeight: FontWeight.normal,
-                                            fontSize: 10,
-                                            color: AppColor.appWhiteColor,
-                                          ),
-                                        ),
-                                        TextSpan(
-                                          text: '\n-',
-                                          style: TextStyle(
-                                            fontWeight: FontWeight.bold,
-                                            fontSize: 15,
-                                            color: AppColor.appWhiteColor,
-                                          ),
-                                        ),
-                                      ]),
-                                ),
-                              ],
-                            )
-                          ],
-                        ),
-                      ],
-                    ),
-                  ),
+                  tableHeader("Database ID"),
+                  tableHeader("Database Name"),
+                  tableHeader("Date of Creation"),
+                  tableHeader("Category"),
+                  tableHeader("Creator")
                 ],
               ),
-              const SizedBox(width: 20),
-              Column(
+              TableRow(
+                decoration: BoxDecoration(
+                    border: Border(
+                        bottom: BorderSide(
+                  color: AppColor.dashboardGreyColor,
+                  width: 0.5,
+                ))),
+                children: [                  
+                  InkWell(onTap: () {}, child: tableHeader("1")),
+                  InkWell(onTap: () {}, child: tableHeader("2022 IT Assets Register")),
+                  InkWell(onTap: () {}, child: tableHeader("01/08/2023")),
+                  InkWell(onTap: () {}, child: tableHeader("IT Register")),
+                  InkWell(onTap: () {}, child: tableHeader("Henry Ndou"))
+                ],
+              ),
+              TableRow(
+                decoration: BoxDecoration(
+                    border: Border(
+                        bottom: BorderSide(
+                  color: AppColor.dashboardGreyColor,
+                  width: 0.5,
+                ))),
                 children: [
-                  Container(
-                    decoration: BoxDecoration(
-                      color: AppColor.dashboardGreyColor,
-                      borderRadius: BorderRadius.circular(15),
-                    ),
-                    padding: const EdgeInsets.symmetric(
-                      vertical: 10,
-                      horizontal: 20,
-                    ),
-                    child: Row(
-                      children: [
-                        Column(
-                          children: [
-                            Row(
-                              children: [
-                                Icon(
-                                  Icons.access_time,
-                                  color: AppColor.appWhiteColor,
-                                ),
-                                SizedBox(width: 5),
-                                Text(
-                                  'July 19 2023',
-                                  style:
-                                      TextStyle(color: AppColor.appWhiteColor),
-                                ),
-                                SizedBox(width: 15),
-                                ClipRect(
-                                  child: BackdropFilter(
-                                    filter: ImageFilter.blur(
-                                      sigmaX: 15,
-                                      sigmaY: 15,
-                                    ),
-                                    child: Text(
-                                      'On Time',
-                                      style: TextStyle(
-                                          color: AppColor.appWhiteColor,
-                                          fontWeight: FontWeight.bold),
-                                    ),
-                                  ),
-                                ),
-                              ],
-                            ),
-                            SizedBox(height: 10),
-                            Row(
-                              children: [
-                                Text.rich(
-                                  TextSpan(
-                                      style: TextStyle(
-                                          fontSize: 17,
-                                          color: AppColor.appWhiteColor,
-                                          fontWeight: FontWeight.normal),
-                                      children: [
-                                        TextSpan(
-                                          text: 'Check In Time',
-                                          style: TextStyle(
-                                            fontWeight: FontWeight.normal,
-                                            fontSize: 10,
-                                            color: AppColor.appWhiteColor,
-                                          ),
-                                        ),
-                                        TextSpan(
-                                          text: '\n08:30',
-                                          style: TextStyle(
-                                            fontWeight: FontWeight.bold,
-                                            fontSize: 15,
-                                            color: AppColor.appWhiteColor,
-                                          ),
-                                        ),
-                                      ]),
-                                ),
-                                SizedBox(width: 20),
-                                Text.rich(
-                                  TextSpan(
-                                      style: TextStyle(
-                                          fontSize: 17,
-                                          color: AppColor.appWhiteColor,
-                                          fontWeight: FontWeight.normal),
-                                      children: [
-                                        TextSpan(
-                                          text: 'Check Out Time',
-                                          style: TextStyle(
-                                            fontWeight: FontWeight.normal,
-                                            fontSize: 10,
-                                            color: AppColor.appWhiteColor,
-                                          ),
-                                        ),
-                                        TextSpan(
-                                          text: '\n17:15',
-                                          style: TextStyle(
-                                            fontWeight: FontWeight.bold,
-                                            fontSize: 15,
-                                            color: AppColor.appWhiteColor,
-                                          ),
-                                        ),
-                                      ]),
-                                ),
-                              ],
-                            )
-                          ],
-                        ),
-                      ],
-                    ),
-                  ),
-                  SizedBox(height: 10),
-                  Container(
-                    decoration: BoxDecoration(
-                      color: AppColor.dashboardGreyColor,
-                      borderRadius: BorderRadius.circular(15),
-                    ),
-                    padding: const EdgeInsets.symmetric(
-                      vertical: 10,
-                      horizontal: 20,
-                    ),
-                    child: Row(
-                      children: [
-                        Column(
-                          children: [
-                            Row(
-                              children: [
-                                Icon(
-                                  Icons.access_time,
-                                  color: AppColor.appWhiteColor,
-                                ),
-                                SizedBox(width: 5),
-                                Text(
-                                  'July 21 2023',
-                                  style:
-                                      TextStyle(color: AppColor.appWhiteColor),
-                                ),
-                                SizedBox(width: 15),
-                                ClipRect(
-                                  child: BackdropFilter(
-                                    filter: ImageFilter.blur(
-                                      sigmaX: 15,
-                                      sigmaY: 15,
-                                    ),
-                                    child: Text(
-                                      'Absent',
-                                      style: TextStyle(
-                                          color: AppColor.appWhiteColor,
-                                          fontWeight: FontWeight.bold),
-                                    ),
-                                  ),
-                                ),
-                              ],
-                            ),
-                            SizedBox(height: 10),
-                            Row(
-                              children: [
-                                Text.rich(
-                                  TextSpan(
-                                      style: TextStyle(
-                                          fontSize: 17,
-                                          color: AppColor.appWhiteColor,
-                                          fontWeight: FontWeight.normal),
-                                      children: [
-                                        TextSpan(
-                                          text: 'Check In Time',
-                                          style: TextStyle(
-                                            fontWeight: FontWeight.normal,
-                                            fontSize: 10,
-                                            color: AppColor.appWhiteColor,
-                                          ),
-                                        ),
-                                        TextSpan(
-                                          text: '\n-',
-                                          style: TextStyle(
-                                            fontWeight: FontWeight.bold,
-                                            fontSize: 15,
-                                            color: AppColor.appWhiteColor,
-                                          ),
-                                        ),
-                                      ]),
-                                ),
-                                SizedBox(width: 20),
-                                Text.rich(
-                                  TextSpan(
-                                      style: TextStyle(
-                                          fontSize: 17,
-                                          color: AppColor.appWhiteColor,
-                                          fontWeight: FontWeight.normal),
-                                      children: [
-                                        TextSpan(
-                                          text: 'Check Out Time',
-                                          style: TextStyle(
-                                            fontWeight: FontWeight.normal,
-                                            fontSize: 10,
-                                            color: AppColor.appWhiteColor,
-                                          ),
-                                        ),
-                                        TextSpan(
-                                          text: '\n-',
-                                          style: TextStyle(
-                                            fontWeight: FontWeight.bold,
-                                            fontSize: 15,
-                                            color: AppColor.appWhiteColor,
-                                          ),
-                                        ),
-                                      ]),
-                                ),
-                              ],
-                            )
-                          ],
-                        ),
-                      ],
-                    ),
-                  ),
+                  InkWell(onTap: () {}, child: tableHeader("2")),
+                  InkWell(onTap: () {}, child: tableHeader("Warehouse HO")),
+                  InkWell(onTap: () {}, child: tableHeader("21/08/2023")),
+                  InkWell(onTap: () {}, child: tableHeader("Warehouse")),
+                  InkWell(onTap: () {}, child: tableHeader("Zaphenat Phaneah"))
+                ],
+              ),
+              TableRow(
+                decoration: BoxDecoration(
+                    border: Border(
+                        bottom: BorderSide(
+                  color: AppColor.dashboardGreyColor,
+                  width: 0.5,
+                ))),
+                children: [
+                  InkWell(onTap: () {}, child: tableHeader("3")),
+                  InkWell(onTap: () {}, child: tableHeader("Stats")),
+                  InkWell(onTap: () {}, child: tableHeader("15/08/2023")),
+                  InkWell(onTap: () {}, child: tableHeader("Stats Assets Register")),
+                  InkWell(onTap: () {}, child: tableHeader("Mercy Ncube"))
+                ],
+              ),
+              TableRow(
+                decoration: BoxDecoration(
+                    border: Border(
+                        bottom: BorderSide(
+                  color: AppColor.dashboardGreyColor,
+                  width: 0.5,
+                ))),
+                children: [
+                  InkWell(onTap: () {}, child: tableHeader("4")),
+                  InkWell(onTap: () {}, child: tableHeader("Assets  Register")),
+                  InkWell(onTap: () {}, child: tableHeader("17/08/2023")),
+                  InkWell(onTap: () {}, child: tableHeader("IT Register")),
+                  InkWell(onTap: () {}, child: tableHeader("Henry Ndou"))
                 ],
               ),
             ],
-          ),
-          Container(
-            margin: EdgeInsets.symmetric(vertical: 10),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text(
-                  'Showing x out of 20  results.',
-                  style: TextStyle(color: AppColor.appWhiteColor),
-                ),
-                Text(
-                  'View all',
-                  style: TextStyle(
-                      color: AppColor.appWhiteColor,
-                      fontStyle: FontStyle.italic),
-                ),
-              ],
-            ),
-          ),
+          )
         ],
+      ),
+    );
+  }
+
+  Widget tableHeader(text) {
+    return Container(
+      margin: EdgeInsets.symmetric(vertical: 15),
+      child: Text(
+        text,
+        style: TextStyle(
+            fontWeight: FontWeight.normal, color: AppColor.appWhiteColor),
       ),
     );
   }

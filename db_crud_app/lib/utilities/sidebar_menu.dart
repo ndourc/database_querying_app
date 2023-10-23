@@ -15,10 +15,10 @@ var myDrawer = Drawer(
         child: Text(
           'Welcome To \nbaobab.db',
           style: TextStyle(
-              color: AppColor.mainAccent,
+              color: AppColor.greenAccentColor,
               fontFamily: 'Bradley Hand ITC',
               fontSize: 40,
-              fontWeight: FontWeight.w500),
+              fontWeight: FontWeight.bold),
         ),
       ),
       ListTile(
@@ -30,10 +30,10 @@ var myDrawer = Drawer(
       ),
       ListTile(
         leading: Icon(
-          Icons.list_alt_outlined,
+          Icons.file_upload_rounded,
           color: AppColor.mainAccent,
         ),
-        title: Text('S H O W  A L L  D A T A B A S E S'),
+        title: Text('I M P O R T'),
       ),
       ListTile(
         leading: Icon(
