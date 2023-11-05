@@ -134,9 +134,11 @@ class _EmployeeDetailsWidgetState extends State<EmployeeDetailsWidget> {
                   color: AppColor.dashboardGreyColor,
                   width: 0.5,
                 ))),
-                children: [                  
+                children: [
                   InkWell(onTap: () {}, child: tableHeader("1")),
-                  InkWell(onTap: () {}, child: tableHeader("2022 IT Assets Register")),
+                  InkWell(
+                      onTap: () {},
+                      child: tableHeader("2022 IT Assets Register")),
                   InkWell(onTap: () {}, child: tableHeader("01/08/2023")),
                   InkWell(onTap: () {}, child: tableHeader("IT Register")),
                   InkWell(onTap: () {}, child: tableHeader("Henry Ndou"))
@@ -168,7 +170,9 @@ class _EmployeeDetailsWidgetState extends State<EmployeeDetailsWidget> {
                   InkWell(onTap: () {}, child: tableHeader("3")),
                   InkWell(onTap: () {}, child: tableHeader("Stats")),
                   InkWell(onTap: () {}, child: tableHeader("15/08/2023")),
-                  InkWell(onTap: () {}, child: tableHeader("Stats Assets Register")),
+                  InkWell(
+                      onTap: () {},
+                      child: tableHeader("Stats Assets Register")),
                   InkWell(onTap: () {}, child: tableHeader("Mercy Ncube"))
                 ],
               ),
