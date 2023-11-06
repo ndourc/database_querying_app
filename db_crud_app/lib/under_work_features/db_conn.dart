@@ -1,7 +1,7 @@
 class MyDatabases {
   final  database_id;
   final String database_name;
-  final DateTime date_of_creation;
+  final String date_of_creation;
   final String category;
   final String creator;
 

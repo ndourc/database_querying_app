@@ -1,16 +1,11 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
-
 import 'app_colours.dart';
 
-class EmployeeDetailsWidget extends StatefulWidget {
-  const EmployeeDetailsWidget({super.key});
+class EmployeeDetailsWidget extends StatelessWidget {
+  const EmployeeDetailsWidget({
+    Key? key}) : super(key: key);
 
-  @override
-  State<EmployeeDetailsWidget> createState() => _EmployeeDetailsWidgetState();
-}
-
-class _EmployeeDetailsWidgetState extends State<EmployeeDetailsWidget> {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -127,70 +122,70 @@ class _EmployeeDetailsWidgetState extends State<EmployeeDetailsWidget> {
                   tableHeader("Creator")
                 ],
               ),
-              TableRow(
-                decoration: BoxDecoration(
-                    border: Border(
-                        bottom: BorderSide(
-                  color: AppColor.dashboardGreyColor,
-                  width: 0.5,
-                ))),
-                children: [
-                  InkWell(onTap: () {}, child: tableHeader("1")),
-                  InkWell(
-                      onTap: () {},
-                      child: tableHeader("2022 IT Assets Register")),
-                  InkWell(onTap: () {}, child: tableHeader("01/08/2023")),
-                  InkWell(onTap: () {}, child: tableHeader("IT Register")),
-                  InkWell(onTap: () {}, child: tableHeader("Henry Ndou"))
-                ],
-              ),
-              TableRow(
-                decoration: BoxDecoration(
-                    border: Border(
-                        bottom: BorderSide(
-                  color: AppColor.dashboardGreyColor,
-                  width: 0.5,
-                ))),
-                children: [
-                  InkWell(onTap: () {}, child: tableHeader("2")),
-                  InkWell(onTap: () {}, child: tableHeader("Warehouse HO")),
-                  InkWell(onTap: () {}, child: tableHeader("21/08/2023")),
-                  InkWell(onTap: () {}, child: tableHeader("Warehouse")),
-                  InkWell(onTap: () {}, child: tableHeader("Zaphenat Phaneah"))
-                ],
-              ),
-              TableRow(
-                decoration: BoxDecoration(
-                    border: Border(
-                        bottom: BorderSide(
-                  color: AppColor.dashboardGreyColor,
-                  width: 0.5,
-                ))),
-                children: [
-                  InkWell(onTap: () {}, child: tableHeader("3")),
-                  InkWell(onTap: () {}, child: tableHeader("Stats")),
-                  InkWell(onTap: () {}, child: tableHeader("15/08/2023")),
-                  InkWell(
-                      onTap: () {},
-                      child: tableHeader("Stats Assets Register")),
-                  InkWell(onTap: () {}, child: tableHeader("Mercy Ncube"))
-                ],
-              ),
-              TableRow(
-                decoration: BoxDecoration(
-                    border: Border(
-                        bottom: BorderSide(
-                  color: AppColor.dashboardGreyColor,
-                  width: 0.5,
-                ))),
-                children: [
-                  InkWell(onTap: () {}, child: tableHeader("4")),
-                  InkWell(onTap: () {}, child: tableHeader("Assets  Register")),
-                  InkWell(onTap: () {}, child: tableHeader("17/08/2023")),
-                  InkWell(onTap: () {}, child: tableHeader("IT Register")),
-                  InkWell(onTap: () {}, child: tableHeader("Henry Ndou"))
-                ],
-              ),
+              // TableRow(
+              //   decoration: BoxDecoration(
+              //       border: Border(
+              //           bottom: BorderSide(
+              //     color: AppColor.dashboardGreyColor,
+              //     width: 0.5,
+              //   ))),
+              //   children: [
+              //     InkWell(onTap: () {}, child: tableHeader("1")),
+              //     InkWell(
+              //         onTap: () {},
+              //         child: tableHeader("2022 IT Assets Register")),
+              //     InkWell(onTap: () {}, child: tableHeader("01/08/2023")),
+              //     InkWell(onTap: () {}, child: tableHeader("IT Register")),
+              //     InkWell(onTap: () {}, child: tableHeader("Henry Ndou"))
+              //   ],
+              // ),
+              // TableRow(
+              //   decoration: BoxDecoration(
+              //       border: Border(
+              //           bottom: BorderSide(
+              //     color: AppColor.dashboardGreyColor,
+              //     width: 0.5,
+              //   ))),
+              //   children: [
+              //     InkWell(onTap: () {}, child: tableHeader("2")),
+              //     InkWell(onTap: () {}, child: tableHeader("Warehouse HO")),
+              //     InkWell(onTap: () {}, child: tableHeader("21/08/2023")),
+              //     InkWell(onTap: () {}, child: tableHeader("Warehouse")),
+              //     InkWell(onTap: () {}, child: tableHeader("Zaphenat Phaneah"))
+              //   ],
+              // ),
+              // TableRow(
+              //   decoration: BoxDecoration(
+              //       border: Border(
+              //           bottom: BorderSide(
+              //     color: AppColor.dashboardGreyColor,
+              //     width: 0.5,
+              //   ))),
+              //   children: [
+              //     InkWell(onTap: () {}, child: tableHeader("3")),
+              //     InkWell(onTap: () {}, child: tableHeader("Stats")),
+              //     InkWell(onTap: () {}, child: tableHeader("15/08/2023")),
+              //     InkWell(
+              //         onTap: () {},
+              //         child: tableHeader("Stats Assets Register")),
+              //     InkWell(onTap: () {}, child: tableHeader("Mercy Ncube"))
+              //   ],
+              // ),
+              // TableRow(
+              //   decoration: BoxDecoration(
+              //       border: Border(
+              //           bottom: BorderSide(
+              //     color: AppColor.dashboardGreyColor,
+              //     width: 0.5,
+              //   ))),
+              //   children: [
+              //     InkWell(onTap: () {}, child: tableHeader("4")),
+              //     InkWell(onTap: () {}, child: tableHeader("Assets  Register")),
+              //     InkWell(onTap: () {}, child: tableHeader("17/08/2023")),
+              //     InkWell(onTap: () {}, child: tableHeader("IT Register")),
+              //     InkWell(onTap: () {}, child: tableHeader("Henry Ndou"))
+              //   ],
+              // ),
             ],
           )
         ],
